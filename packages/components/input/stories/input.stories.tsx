@@ -539,6 +539,18 @@ const ServerValidationTemplate = (args: InputProps) => {
   );
 };
 
+const PlaceholderColorTemplate = (args) => (
+  <div className="w-full max-w-[240px]">
+    <Input {...args} placeholder="Enter your email" className="placeholder-color-red-500" />
+  </div>
+);
+
+const PlaceholderOpacityTemplate = (args) => (
+  <div className="w-full max-w-[240px]">
+    <Input {...args} placeholder="Enter your email" className="placeholder-opacity-50" />
+  </div>
+);
+
 export const Default = {
   render: MirrorTemplate,
 
@@ -782,6 +794,22 @@ export const CustomWithHooks = {
 
 export const WithReactHookForm = {
   render: WithReactHookFormTemplate,
+
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const PlaceholderColor = {
+  render: PlaceholderColorTemplate,
+
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const PlaceholderOpacity = {
+  render: PlaceholderOpacityTemplate,
 
   args: {
     ...defaultProps,
